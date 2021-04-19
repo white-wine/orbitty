@@ -3,6 +3,7 @@ $blue: #193247;
 $red: #a2231d;
 $fucsia: #ef438b;
 $orange: #f66a1d;
+$white: #fff;
 
 * {
   margin: 0;
@@ -16,7 +17,7 @@ $orange: #f66a1d;
   padding: 0;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  color: #193247;
+  color: $blue;
 }
 
 .header {
@@ -34,7 +35,7 @@ nav {
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
-  background-color: #193247;
+  background-color: $blue;
 }
 
 nav img {
@@ -54,7 +55,7 @@ nav img {
 }
 
 .nav-links ul li a {
-  color: #fff;
+  color: $white;
   text-decoration: none;
   font-size: 19px;
 }
@@ -63,7 +64,7 @@ nav img {
   content: "";
   width: 0%;
   height: 2px;
-  background: #a2231d;
+  background: $red;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -75,7 +76,7 @@ nav img {
 
 .text-box {
   width: 90%;
-  color: #fff;
+  color: $white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,13 +86,13 @@ nav img {
 
 .text-box h1 {
   font-size: 55px;
-  color: #fff;
+  color: $white;
   margin-bottom: 20px;
 }
 
 .hero-btn {
   display: inline-block;
-  border: 1px solid #fff;
+  border: 1px solid $white;
   padding: 12px 34px;
   font-size: 19px;
   background: transparent;
@@ -100,17 +101,17 @@ nav img {
 }
 
 .hero-btn2 {
-  border: 1px solid #193247;
+  border: 1px solid $blue;
 }
 
 .hero-a {
   text-decoration: none;
-  color: #fff;
+  color: $white;
 }
 
 .hero-btn:hover {
-  border: 1px solid #193247;
-  background: #193247;
+  border: 1px solid $blue;
+  background: $blue;
   transition: 1s;
 }
 
@@ -125,12 +126,12 @@ nav .fa {
 
   .nav-links ul li {
     display: block;
-    color: #fff;
+    color: $white;
   }
 
   .nav-links {
     position: absolute;
-    background: #193247;
+    background: $blue;
     height: 100vh;
     width: 200px;
     top: 0;
@@ -141,12 +142,12 @@ nav .fa {
   }
 
   .nav-links ul li a {
-    color: #fff;
+    color: $white;
   }
 
   nav .fa {
     display: block;
-    color: #fff;
+    color: $white;
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -169,7 +170,7 @@ nav .fa {
 h2 {
   font-size: 40px;
   font-weight: 500;
-  color: #193247;
+  color: $blue;
 }
 
 .row {
@@ -191,7 +192,7 @@ h2 {
 h3 {
   text-align: center;
   margin: 10px 0;
-  color: #193247;
+  color: $blue;
 }
 
 .sobre-col:hover {
@@ -307,7 +308,7 @@ h3 {
 
 .cta h3 {
   font-size: 22px;
-  color: #193247;
+  color: $blue;
   margin-bottom: 40px;
   padding: 0;
 }
@@ -331,7 +332,7 @@ h3 {
   margin-top: 20px;
 }
 .icons .fa {
-  color: #193247;
+  color: $blue;
   margin: 0 13px;
   cursor: pointer;
   padding: 18px 0;
@@ -355,24 +356,24 @@ h3 {
 }
 
 .pagina-no-encontrada h1 {
-  color: #193247;
+  color: $blue;
   margin: 30px 0;
 }
 
 .pagina-no-encontrada p {
-  color: #193247;
+  color: $blue;
   font-size: 19px;
   text-align: center;
   margin: 5px;
 }
 
 .pagina-no-encontrada p a {
-  color: #fff;
+  color: $white;
 }
 
 .hero-error {
   display: inline-block;
-  border: 1px solid #193247;
+  border: 1px solid $blue;
   padding: 20px 0px;
   margin: 20px;
   font-size: 19px;
@@ -383,18 +384,18 @@ h3 {
 .hero-a-error {
   text-decoration: none;
   padding: 20px 34px;
-  color: #193247;
+  color: $blue;
 }
 
 .hero-error:hover {
-  border: 1px solid #193247;
-  background: #193247;
+  border: 1px solid $blue;
+  background: $blue;
   transition: 1s;
 }
 
 .hero-a-error:hover {
   text-decoration: none;
-  color: #fff;
+  color: $white;
   transition: 1s;
 }
 
