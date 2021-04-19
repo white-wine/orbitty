@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aplicación gastronómica para personas con responsabilidad social que quieren ayudar e inspirar con sus experiencias"
+    />
+    <meta
+      name="keywords"
+      content="accesibilidad, gastronomia, comunidad gastronómica"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Acerca de Orbitty</title>
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="Assets/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+          <ul>
+            <li>
+              <a href="">Inicio</a>
+            </li>
+            <li>
+              <a href="">Acerca</a>
+            </li>
+            <li>
+              <a href="">Beneficios</a>
+            </li>
+            <li>
+              <a href="">Historias</a>
+            </li>
+            <li>
+              <a href="">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+      </nav>
+    </section>
+    <!--Contenido Acerca de -->
+    <h1 class="sub-h1">Acerca de Orbitty</h1>
+    <section class="acerca-de">
+      <div class="row">
+        <div class="about-col">
+          <h2>Acerca de</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+          <a href="" class="hero-btn blue-btn">Explorar</a>
+        </div>
+        <div class="about-col"><img src="Assets/cartel.png" alt="" /></div>
+      </div>
+    </section>
+    <!--Footer-->
+    <section class="footer">
+      <div class="icons">
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
+    </section>
+
+    <!--JavaScript para menu toggle-->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-270px";
+      }
+    </script>
+  </body>
+</html>
