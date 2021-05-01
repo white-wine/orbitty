@@ -23,8 +23,8 @@ $white: #fff;
   position: relative;
 }
 
+/*Navbar*/
 nav {
-  display: flex;
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
@@ -35,43 +35,117 @@ nav img {
   width: 150px;
 }
 
-.nav-links {
-  flex: 1;
-  text-align: right;
+@mixin computer {
+  @media (min-width: 848px) {
+    @content;
+  }
 }
 
-.nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.nav-links ul li a {
-  color: $white;
+a {
   text-decoration: none;
   font-size: 19px;
 }
 
-.nav-links ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: $red;
-  display: block;
+.container {
+  max-width: 1400px;
   margin: auto;
-  transition: 0.5s;
+}
+#primary-nav {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+  .container {
+    padding: 0 10px;
+  }
+  ul {
+    @include computer {
+      display: grid;
+    }
+    background-color: $blue;
+    grid-template-columns: repeat(auto-fit, minmax(91px, 1fr));
+    display: grid;
+    align-content: center;
+    grid-column-gap: 9px;
+    grid-row-gap: 10px;
+    li {
+      a {
+        color: $white;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        transition: 0.4s ease-in;
+        &:hover,
+        &:focus {
+          background: darken($red, 20%);
+        }
+        &:active {
+          border: 2px solid $white;
+        }
+      }
+    }
+  }
+}
+.main-nav {
+  background: $blue;
+  grid-column: 1 / span 2;
+}
+#hamburger {
+  margin: 1em;
+  justify-self: end;
+  display: block;
+  background: $white;
+  border: none;
+  font-size: 1.2em;
+  line-height: 1;
+  #expanded {
+    display: none;
+  }
+  svg {
+    width: 3em;
+    height: 3em;
+    background: $white;
+  }
+  span {
+    font-variant: small-caps;
+    display: block;
+    position: relative;
+    top: 15px;
+  }
+  @include computer {
+    display: none;
+  }
+  &[aria-expanded="true"] {
+    color: $blue;
+    svg {
+      background: $blue;
+      fill: $white;
+    }
+    span {
+      position: static;
+    }
+    #expanded {
+      display: block;
+    }
+  }
 }
 
-.nav-links ul li:hover::after {
-  width: 100%;
+#hamburger[aria-expanded="true"] + .main-nav {
+  display: block;
+}
+.js-enabled .main-nav {
+  display: none;
+  @include computer {
+    display: block;
+  }
 }
 
+/* Banner */
 .text-box {
   width: 90%;
   color: $white;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -491,13 +565,13 @@ h3 {
   width: 100%;
 }
 
-.contact-us {
+/*.contact-us {
   width: 80%;
   margin: auto;
 }
 
 .contact-col {
-  flex-basis: 48%;
+  flex: 50%;
   margin-bottom: 30px;
 }
 
@@ -524,4 +598,52 @@ h3 {
   margin-bottom: 17px;
   outline: none;
   border: 1px solid #ccc;
+}
+*/
+
+.contact-form {
+  width: 85%;
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+}
+
+.txtb {
+  border: 1px solid grey;
+  margin: 8px 0;
+  padding: 12px 18px;
+}
+
+.txtb label {
+  display: block;
+  text-align: left;
+  font-size: 19px;
+}
+
+.txtb input,
+.txtb textarea {
+  width: 100%;
+  font-size: 19px;
+  background: none;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  background: $blue;
+  padding: 14px 0;
+  color: $white;
+  font-size: 19px;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.row-contact {
+  display: flex;
+}
+
+.column-contact {
+  flex: 50%;
 }

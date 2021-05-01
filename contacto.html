@@ -26,34 +26,48 @@
   </head>
   <body>
     <section class="header">
-      <nav>
-        <a href="index.html"><img src="Assets/logo.png" alt="Inicio" /></a>
-        <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-          <ul role="menu">
-            <li role="presentation">
-              <a href="index.html" role="menuitem">Inicio</a>
+      <nav id="primary-nav" aria-label="Main">
+        <div class="container">
+          <a href="/" class="logo-holder">
+            <img class="logo" src="./Assets/logo.png" alt="Inicio" />
+          </a>
+        </div>
+        <button id="hamburger" aria-expanded="true">
+          <span>Menu</span>
+          <span id="expanded">Expandido</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
+        <div class="main-nav">
+          <ul class="container">
+            <li>
+              <a href="./index.html">Inicio </a>
             </li>
-            <li role="presentation">
-              <a href="acerca.html" role="menuitem">Acerca</a>
+            <li>
+              <a href="./acerca.html">Acerca de</a>
             </li>
-            <li role="presentation">
-              <a href="beneficios.html" role="menuitem">Beneficios</a>
+            <li>
+              <a href="./beneficios.html">Beneficios</a>
             </li>
-            <li role="presentation">
-              <a href="historias.html" role="menuitem">Historias</a>
+            <li>
+              <a href="./historias.html">Historias</a>
             </li>
-            <li role="presentation">
-              <a href="contacto.html" aria-current="page">Contacto</a>
+            <li>
+              <a href="./contacto.html" aria-current="page">Contacto</a>
             </li>
           </ul>
         </div>
-        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
       </nav>
     </section>
-    <!--Contacto-->
-    <h1>Contacto</h1>
     <!--Mapa-->
+    <div class="row-contact">
+      <div class="column-contact">
     <section class="ubicacion">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52563.483211897306!2d-58.456035046877034!3d-34.57335767507688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59c771eb933%3A0x6b3113b596d78c69!2sPalermo%2C%20CABA!5e0!3m2!1ses!2sar!4v1618895387636!5m2!1ses!2sar"
@@ -65,78 +79,46 @@
         title="mapa del barrio de palermo en buenos aires argentina"
       ></iframe>
     </section>
+  </div>
     <!--Form-->
+    <div class="column-contact">
     <section class="contactanos">
-      <div class="row">
-        <div class="contact-col">
-          <div>
-            <i class="fa fa-home"></i>
-            <span><h2>Palermo, Buenos Aires</h2> </span>
-          </div>
-          <div>
-            <i class="fa fa-phone"></i>
-            <span><h2>+54 9 11 1234 4567</h2> </span>
-          </div>
-          <div>
-            <i class="fa fa-envelope-o"></i>
-            <span><h2>info@Orbitty.com</h2> </span>
-          </div>
+      <div class="contact-form">
+        <h1>Contactanos</h1>
+        <div class="txtb">
+          <label for="">Nombre</label>
+          <input type="text" name="" value="" placeholder="Juan Perez" />
         </div>
-        <div class="contact-col">
-          <p aria-hidden="true">Los campos marcados con (*) son requeridos</p>
-          <form action="">
-            <div>
-              <label for="nombre"
-                >Nombre<span aria-hidden="true" class="star">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="Deja tu nombre"
-                id="nombre"
-                required
-              />
-            </div>
-            <div>
-              <label for="correo"
-                >Correo electronico<span aria-hidden="true" class="star"
-                  >*</span
-                ></label
-              >
-              <input
-                type="email"
-                placeholder="Deja tu correo electronico"
-                id="correo"
-                required
-              />
-            </div>
-            <div>
-              <label for="asunto">Asunto (opcional) </label>
-              <input
-                type="text"
-                placeholder="Introduci el asunto"
-                id="asunto"
-                required
-              />
-            </div>
-            <div>
-              <label for="mensaje"
-                >Mensaje<span aria-hidden="true" class="star">*</span></label
-              >
-              <textarea
-                rows="8"
-                placeholder="mensaje"
-                id="mensaje"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="hero-btn blue-btn">
-              Enviar mensaje
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
 
+        <div class="txtb">
+          <label for="">Correo electronico</label>
+          <input
+            type="email"
+            name=""
+            value=""
+            placeholder="juanperez@mail.com"
+          />
+        </div>
+
+        <div class="txtb">
+          <label for="">Asunto</label>
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Mas info sobre servicios"
+          />
+        </div>
+
+        <div class="txtb">
+          <label for="">Mensaje</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn">Enviar</button>
+      </div>
+    </div>
+    </section>
+  </div>
     <!--Footer-->
     <section class="footer">
       <h4>Acerca de Orbitty</h4>
@@ -150,14 +132,20 @@
     <!--JavaScript para menu toggle-->
 
     <script>
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
+      document.body.classList.toggle("js-enabled");
 
-      function hideMenu() {
-        navLinks.style.right = "-270px";
-      }
+      document.addEventListener("DOMContentLoaded", function (event) {
+        let hamburger = document.getElementById("hamburger");
+        // If JS is enabled, it will un-expand the hamburger
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.onclick = function () {
+          if (this.getAttribute("aria-expanded") == "false") {
+            this.setAttribute("aria-expanded", "true");
+          } else {
+            this.setAttribute("aria-expanded", "false");
+          }
+        };
+      });
     </script>
   </body>
 </html>

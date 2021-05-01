@@ -26,29 +26,43 @@
   </head>
   <body>
     <section class="header">
-      <nav>
-        <a href="index.html"><img src="Assets/logo.png" alt="Inicio" /></a>
-        <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-          <ul role="menu">
-            <li role="presentation">
-              <a href="index.html" aria-current="page">Inicio</a>
+      <nav id="primary-nav" aria-label="Main">
+        <div class="container">
+          <a href="/" class="logo-holder">
+            <img class="logo" src="./Assets/logo.png" alt="Inicio" />
+          </a>
+        </div>
+        <button id="hamburger" aria-expanded="true">
+          <span>Menu</span>
+          <span id="expanded">Expandido</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
+        <div class="main-nav">
+          <ul class="container">
+            <li>
+              <a href="./index.html" aria-current="page">Inicio </a>
             </li>
-            <li role="presentation">
-              <a href="acerca.html" role="menuitem">Acerca</a>
+            <li>
+              <a href="./acerca.html">Acerca de</a>
             </li>
-            <li role="presentation">
-              <a href="beneficios.html" role="menuitem">Beneficios</a>
+            <li>
+              <a href="./beneficios.html">Beneficios</a>
             </li>
-            <li role="presentation">
-              <a href="historias.html" role="menuitem">Historias</a>
+            <li>
+              <a href="./historias.html">Historias</a>
             </li>
-            <li role="presentation">
-              <a href="contacto.html" role="menuitem">Contacto</a>
+            <li>
+              <a href="./contacto.html">Contacto</a>
             </li>
           </ul>
         </div>
-        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
       </nav>
       <div class="text-box">
         <h1>
@@ -152,14 +166,20 @@
     <!--JavaScript para menu toggle-->
 
     <script>
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
+      document.body.classList.toggle("js-enabled");
 
-      function hideMenu() {
-        navLinks.style.right = "-270px";
-      }
+      document.addEventListener("DOMContentLoaded", function (event) {
+        let hamburger = document.getElementById("hamburger");
+        // If JS is enabled, it will un-expand the hamburger
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.onclick = function () {
+          if (this.getAttribute("aria-expanded") == "false") {
+            this.setAttribute("aria-expanded", "true");
+          } else {
+            this.setAttribute("aria-expanded", "false");
+          }
+        };
+      });
     </script>
   </body>
 </html>
