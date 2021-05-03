@@ -555,57 +555,21 @@ h3 {
 }
 
 /*------Contact--------*/
+
 .ubicacion {
   width: 75%;
   margin: auto;
-  padding: 80px 0;
+  padding: 4rem 0;
 }
 
 .ubicacion iframe {
   width: 100%;
 }
 
-/*.contact-us {
-  width: 80%;
-  margin: auto;
-}
-
-.contact-col {
-  flex: 50%;
-  margin-bottom: 30px;
-}
-
-.contact-col div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.contact-col div .fa {
-  font-size: 28px;
-  margin: 10px;
-  margin-right: 30px;
-}
-
-.contact-col div h2 {
-  font-size: 20px;
-}
-
-.contact-col input,
-.contact-col textarea {
-  width: 75%;
-  padding: 15px;
-  margin-bottom: 17px;
-  outline: none;
-  border: 1px solid #ccc;
-}
-*/
-
 .contact-form {
-  width: 85%;
-  max-width: 600px;
-  position: absolute;
-  left: 50%;
+  width: 75%;
+  margin: auto;
+  padding: 4rem 0;
   text-align: center;
 }
 
@@ -629,15 +593,25 @@ h3 {
   border: none;
 }
 
+::placeholder {
+  color: #797575;
+  font-size: 18.5px;
+}
+
 .btn {
   display: inline-block;
   background: $blue;
-  padding: 14px 0;
+  padding: 1rem 0;
   color: $white;
   font-size: 19px;
   cursor: pointer;
   margin-top: 8px;
   width: 100%;
+}
+
+.btn:hover {
+  background: $white;
+  color: $blue;
 }
 
 .row-contact {
@@ -646,4 +620,29 @@ h3 {
 
 .column-contact {
   flex: 50%;
+}
+
+.contact-list {
+  font-size: 19px;
+  padding-top: 1rem;
+}
+
+.list-item {
+  padding-top: 1rem;
+  font-size: 18px;
+}
+
+.list-item i {
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+
+.form-p {
+  padding-top: 1rem;
+  font-size: 19px;
+}
+
+.intento {
+  padding: 1rem 0;
+  text-align: center;
 }

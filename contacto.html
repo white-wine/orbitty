@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./Assets/favicon.png" type="image/gif" sizes="16x16">
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -25,7 +27,7 @@
     <title>Contactar a Orbitty</title>
   </head>
   <body>
-    <section class="header">
+    <section >
       <nav id="primary-nav" aria-label="Main">
         <div class="container">
           <a href="/" class="logo-holder">
@@ -66,6 +68,10 @@
       </nav>
     </section>
     <!--Mapa-->
+    <div class="intento">
+      <h1 class="form-h1">¿Tenés alguna pregunta?</h1>
+      <p class="form-p">Conocé cómo Orbitty puede ayudar a destacar tu local gastronómico.</p>
+    </div>
     <div class="row-contact">
       <div class="column-contact">
     <section class="ubicacion">
@@ -78,20 +84,27 @@
         loading="lazy"
         title="mapa del barrio de palermo en buenos aires argentina"
       ></iframe>
+      <div class="direct-contact-container">
+        <ul class="contact-list">
+          <li class="list-item "><i class="fa fa-map-marker " aria-hidden="true"></i>Palermo, Buenos Aires</li>
+          <li class="list-item "><a href="tel:1-212-555-5555" ><i class="fa fa-phone " aria-hidden="true"></i>(212) 555-5555</a></li>
+          <li class="list-item"><a href="mailto:#"><i class="fa fa-envelope " aria-hidden="true"></i>escobar@webagenceparis.com</a></li>
+        </ul>
+      </div>
     </section>
   </div>
     <!--Form-->
     <div class="column-contact">
     <section class="contactanos">
       <div class="contact-form">
-        <h1>Contactanos</h1>
+        
         <div class="txtb">
           <label for="">Nombre</label>
           <input type="text" name="" value="" placeholder="Juan Perez" />
         </div>
 
         <div class="txtb">
-          <label for="">Correo electronico</label>
+          <label for="">Correo electrónico</label>
           <input
             type="email"
             name=""
@@ -106,13 +119,13 @@
             type="text"
             name=""
             value=""
-            placeholder="Mas info sobre servicios"
+            placeholder="Más info sobre servicios"
           />
         </div>
 
         <div class="txtb">
           <label for="">Mensaje</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Escribí acá tu mensaje"></textarea>
         </div>
         <button class="btn">Enviar</button>
       </div>
