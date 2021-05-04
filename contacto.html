@@ -86,7 +86,7 @@
       ></iframe>
       <div class="direct-contact-container">
         <ul class="contact-list">
-          <li class="list-item "><i class="fa fa-map-marker " aria-hidden="true"></i>Palermo, Buenos Aires</li>
+          <li class="list-item " tabindex="0"><i class="fa fa-map-marker " aria-hidden="true"></i>Soria 1234, Palermo. Buenos Aires</li>
           <li class="list-item "><a href="tel:1-212-555-5555" ><i class="fa fa-phone " aria-hidden="true"></i>(212) 555-5555</a></li>
           <li class="list-item"><a href="mailto:#"><i class="fa fa-envelope " aria-hidden="true"></i>escobar@webagenceparis.com</a></li>
         </ul>
@@ -96,39 +96,38 @@
     <!--Form-->
     <div class="column-contact">
     <section class="contactanos">
-      <div class="contact-form">
-        
+      <form class="contact-form">
+        <p aria-hidden="true" class="required">Todos los campos son requeridos.</p>
         <div class="txtb">
-          <label for="">Nombre</label>
-          <input type="text" name="" value="" placeholder="Juan Perez" />
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Juan Perez" id="nombre" name="nombre" required/>
         </div>
-
         <div class="txtb">
-          <label for="">Correo electrónico</label>
+          <label for="email">Correo electrónico</label>
           <input
             type="email"
-            name=""
-            value=""
+            name="email"
             placeholder="juanperez@mail.com"
+            id="email"
+            required
           />
         </div>
-
         <div class="txtb">
-          <label for="">Asunto</label>
+          <label for="asunto">Asunto </label>
           <input
             type="text"
-            name=""
-            value=""
+            name="asunto"
             placeholder="Más info sobre servicios"
+            id="asunto"
+            required
           />
         </div>
-
         <div class="txtb">
-          <label for="">Mensaje</label>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Escribí acá tu mensaje"></textarea>
+          <label for="mensaje">Mensaje </label>
+          <textarea  id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Escribí acá tu mensaje" required></textarea>
         </div>
-        <button class="btn">Enviar</button>
-      </div>
+        <input type="submit" name="Enviar" value="Enviar" class="btn">
+      </form>
     </div>
     </section>
   </div>
