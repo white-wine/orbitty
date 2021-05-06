@@ -657,6 +657,72 @@ footer h4 {
 
 /*Articulos*/
 
+.container-header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../Assets/Digital.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-right: 8%;
+  padding-left: 8%;
+  box-sizing: border-box;
+}
+
+.row-art {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col-art {
+  flex-basis: 50%;
+}
+
+.white {
+  color: $white;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url(../Assets/historia.png);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1 {
+  background-image: url(../Assets/historia.png);
+}
+
+.card2 {
+  background-image: url(../Assets/historia.png);
+}
+
+.card3 {
+  background-image: url(../Assets/historia.png);
+}
+
+.card4 {
+  background-image: url(../Assets/historia.png);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h2 {
+  color: $white;
+  text-shadow: 0 0 5 #999;
+}
+
 .container-articulos {
   max-width: 56.25rem;
   margin: auto;
