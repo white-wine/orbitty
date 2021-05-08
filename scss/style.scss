@@ -761,3 +761,22 @@ aside ul li {
     padding: 1rem;
   }
 }
+
+/* Link Contenido Principal*/
+
+.c-skip-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  transform: translateY(-100%);
+  color: $white;
+
+  &:focus {
+    transform: none;
+  }
+}
+
+#main {
+  outline: none;
+}
